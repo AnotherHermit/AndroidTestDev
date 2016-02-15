@@ -89,7 +89,7 @@ public class ServiceDetailFragment extends Fragment {
         title = (TextView)cnRow.findViewById(R.id.title);
         data = (TextView)cnRow.findViewById(R.id.data);
         title.setText(R.string.active_time_title);
-        data.setText(Long.toString(SystemClock.elapsedRealtimeNanos() -
+        data.setText(Long.toString(SystemClock.elapsedRealtime() -
                 mSrvInfo.lastActivityTime));
 
         return rootView;
