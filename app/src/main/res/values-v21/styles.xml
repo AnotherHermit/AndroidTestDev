@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="MaterialTheme" parent="ParentMaterialTheme">
+        <!-- Customize for only lollipop and above versions features. -->
+
+
+        <item name="android:textColorPrimary">@color/colorPrimaryDarkText</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkText</item>
+        <item name="android:colorForeground">@color/colorPrimaryDarkText</item>
+    </style>
+
+</resources>
