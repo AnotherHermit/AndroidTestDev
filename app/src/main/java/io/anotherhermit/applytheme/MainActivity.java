@@ -3,10 +3,16 @@ package io.anotherhermit.applytheme;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import io.anotherhermit.applytheme.adapter.RecyclerAdapter;
+import io.anotherhermit.applytheme.model.Landscape;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,54 +24,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar.setTitle("Home page");
+        toolbar.inflateMenu(R.menu.menu_main);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                String msg = item.getTitle().toString();
 
-        getSupportActionBar().setTitle("Welcome!");
-        toolbar.setSubtitle("Folks !");
+                Toast.makeText(MainActivity.this, msg + " clicked!", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
 
-
-
-        // Compatibility by JAVA
-//        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            toolbar.setElevation(10f);
-//        }
-//        toolbar.setLogo(R.drawable.good_day);
-//        toolbar.setNavigationIcon(R.drawable.navigation_back);
+        setUpRecyclerView();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    private void setUpRecyclerView() {
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerAdapter adapter = new RecyclerAdapter(this, Landscape.getData());
+        recyclerView.setAdapter(adapter);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        String msg = (String) item.getTitle();
+        LinearLayoutManager mLinearLayoutManagerVertical = new LinearLayoutManager(this);
+        mLinearLayoutManagerVertical.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(mLinearLayoutManagerVertical);
 
-
-        switch (item.getItemId()) {
-            case R.id.discard:
-                break;
-
-            case R.id.search:
-                break;
-
-            case R.id.edit:
-                break;
-
-            case R.id.settings:
-                break;
-
-            case R.id.exit:
-                break;
-
-            default:
-                break;
-        }
-
-        Toast.makeText(this, msg + " clicked!", Toast.LENGTH_SHORT).show();
-
-        return super.onOptionsItemSelected(item);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 }
