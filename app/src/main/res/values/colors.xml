@@ -13,6 +13,11 @@
     <color name="colorPrimaryText">#ffffffff</color>
     <color name="colorSecondaryText">#b3ffffff</color>
     <color name="colorDisabledText">#7fffffff</color>
-    <color name="foreground_material_light">#ff0000</color>
+
+    // Prime or not prime colors
+    <color name="colorPrime">#8bc34a</color>
+    <color name="colorNotPrime">#f44336</color>
+
+
 
 </resources>

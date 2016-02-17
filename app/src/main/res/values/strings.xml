@@ -10,4 +10,6 @@
     <string name="GridView">Grid View</string>
     <string name="StaggeredViewVertical">Staggered View Vertical</string>
     <string name="StaggeredViewHorizontal">Staggered View Horizontal</string>
+    <string name="is_prime">Its prime!</string>
+    <string name="is_not_prime">It\'s not a prime</string>
 </resources>
