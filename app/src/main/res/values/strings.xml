@@ -10,4 +10,6 @@
     <string name="GridView">Grid View</string>
     <string name="StaggeredViewVertical">Staggered View Vertical</string>
     <string name="StaggeredViewHorizontal">Staggered View Horizontal</string>
+    <string name="drawer_open">Variants</string>
+    <string name="drawer_close">Home page</string>
 </resources>
