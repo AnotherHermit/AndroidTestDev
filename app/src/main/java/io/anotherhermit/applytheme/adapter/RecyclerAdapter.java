@@ -29,8 +29,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        Log.d(TAG, "onCreateViewHolder");
-        View view = mInflater.inflate(R.layout.list_item, parent, false);
+//        Log.d(TAG, "onCreateViewHolder");
+        View view = mInflater.inflate(R.layout.list_item_2, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
     }
@@ -42,7 +42,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder " + position);
+//        Log.d(TAG, "onBindViewHolder " + position);
 
         Landscape currentObj = mData.get(position);
         holder.setData(currentObj, position);
@@ -50,24 +50,25 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView title;
-        ImageView imgThumb, imgDelete, imdAdd;
-        int position;
-        Landscape current;
+        ImageView imgThumb;
+//      ImageView imgDelete, imdAdd;
+//      int position;
+//      Landscape current;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title       = (TextView)  itemView.findViewById(R.id.tvTitle);
             imgThumb    = (ImageView) itemView.findViewById(R.id.img_row);
-            imgDelete   = (ImageView) itemView.findViewById(R.id.img_row_delete);
-            imdAdd      = (ImageView) itemView.findViewById(R.id.img_row_add);
+//            imgDelete   = (ImageView) itemView.findViewById(R.id.img_row_delete);
+//            imdAdd      = (ImageView) itemView.findViewById(R.id.img_row_add);
 
         }
 
         public void setData(Landscape current, int position) {
             this.title.setText(current.getTitle());
             this.imgThumb.setImageResource(current.getImageID());
-            this.position = position;
-            this.current = current;
+//            this.position = position;
+//            this.current = current;
         }
     }
 }

@@ -5,4 +5,9 @@
     <string name="thumbnail">TestImage</string>
     <string name="delete_image">Delete image</string>
     <string name="add_image">Add image</string>
+    <string name="LinearViewHorizontal">Linear View Horizontal</string>
+    <string name="LinearViewVertical">Linear View Vertical</string>
+    <string name="GridView">Grid View</string>
+    <string name="StaggeredViewVertical">Staggered View Vertical</string>
+    <string name="StaggeredViewHorizontal">Staggered View Horizontal</string>
 </resources>

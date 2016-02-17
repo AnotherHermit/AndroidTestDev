@@ -3,31 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/discard"
-        android:icon="@drawable/ic_discard"
+        android:id="@+id/linearViewVertical"
+        android:title="@string/LinearViewVertical"
         android:orderInCategory="100"
-        android:title="Delete"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/search"
-        android:icon="@drawable/ic_search"
-        android:orderInCategory="100"
-        android:title="Search"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/settings"
-        android:orderInCategory="100"
-        android:title="Settings"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/edit"
+        android:id="@+id/linearViewHorizontal"
+        android:title="@string/LinearViewHorizontal"
         android:orderInCategory="100"
-        android:title="Edit"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/exit"
+        android:id="@+id/gridView"
+        android:title="@string/GridView"
         android:orderInCategory="100"
-        android:title="Exit"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/staggeredViewHorizontal"
+        android:title="@string/StaggeredViewHorizontal"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/staggeredViewVertical"
+        android:title="@string/StaggeredViewVertical"
+        android:orderInCategory="100"
         app:showAsAction="never"/>
 
 </menu>
