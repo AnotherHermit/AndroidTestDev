@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Material Animation</string>
+    <string name="expJava">Explode - Java</string>
+    <string name="expXml">Explode -XML</string>
+    <string name="slideJava">Slide - Java</string>
+    <string name="slideXml">Slide - XML</string>
+    <string name="fadeJava">Fade - Java</string>
+    <string name="fadeXml">Fade - XML</string>
+    <string name="sharedText">Shared Element</string>
+    <string name="ripWBord">Ripple with Border</string>
+    <string name="ripWOBord">Ripple without Border</string>
+    <string name="custRipWBord">Custom Ripple with Border</string>
+    <string name="custRipWOBord">Custom Ripple without Border</string>
+    <string name="animDescription">Welcome to Android Material Design Animation Sample. It is kind of awesome isn\'t it?</string>
 </resources>
